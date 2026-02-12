@@ -6,33 +6,57 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+header{
+    margin-bottom: 134px;
+}
+
 .topbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 24px 48px;
-    background-color: #191919;
+    padding: 15px 48px;
+    background-color: rgba(15, 15, 15, 0.95);
     color: white;
+    border-bottom: 1px solid black;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    transition: 0.5s;
+}
+
+.topbar.scrolled {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    backdrop-filter: blur(4px);
+    border-bottom: 1px solid #333;
+    transition: 0.5s;
 }
 
 .logo {
     font-size: 28px;
 }
 
+.logo img {
+    height: 32px;
+    width: auto;
+}
+
+.nav-links{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
 nav a {
     margin: 24px;
     text-decoration: none;
     color: #000;
-    opacity: 0.6;
     transition: all 0.3s ease;
     color: #D5D5D5;
 }
 
 nav a:hover {
-    background: #252525;
-    border-radius: 8px;
-    padding: 8px;
-    opacity: 1;
+    color: var(--violet);
 }
 
 .hamburger {
@@ -42,6 +66,12 @@ nav a:hover {
     background: none;
     border: none;
     cursor: pointer;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .hamburger span {
@@ -63,7 +93,7 @@ nav a:hover {
 
     .nav-links {
         position: absolute;
-        top: 80px;
+        top: 70px;
         right: 24px;
         background: #191919;
         box-shadow: 0 12px 30px rgba(0,0,0,0.1);
@@ -83,5 +113,12 @@ nav a:hover {
 
     .nav-links.show {
         display: flex;
+    }
+
+    .topbar.scrolled {
+        padding: 15px 48px;
+        backdrop-filter: blur(4px);
+        border-bottom: 1px solid #333;
+        transition: 0.5s;
     }
 }

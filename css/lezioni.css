@@ -1,12 +1,12 @@
-:root {
-    --nero: #333333;
-    --grigio: #777777;
-    --verde: #9bc88d;
-}
 
 *{
     padding: 0;
     margin: 0;
+}
+
+body{
+    background-color: #191919;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 main{
@@ -14,21 +14,23 @@ main{
     width: 100%;        
     margin: 0 auto;     
     text-align: left;
+
 }
 
 .headerLezione {
+    margin-top: 96px;
     text-align: left;
 }
 
 .headerLezione h1{
     font-size: 50px;
     margin-bottom: 10px;
-    color: var(--nero);
+    color: white;
 }
 
 .headerLezione h3{
     font-size: 15px;
-    color: var(--grigio);
+    color: gray;
 }
 
 .headerLezione img{
@@ -43,7 +45,7 @@ main{
 .contenutoLezione{
     margin-top: 30px;
     line-height: 1.6;
-    color: var(--nero);
+    color: white;
 }
 
 .contenutoLezione h2{
@@ -61,7 +63,6 @@ main{
     width: 95%;
     height: auto;
     margin-top: 10px;
-
     justify-content: center;
     align-content: center;
     display: block;
@@ -72,9 +73,10 @@ main{
 .domande{
     margin-top: 40px;
     padding: 20px;
-    background-color: white;
-    border: solid 1px var(--grigio);
-    border-radius: 15px
+    background-color: #151515;
+    border-radius: 15px;
+    color: white;
+    margin-bottom: 20px;
 }
 
 .domande h2{
@@ -95,15 +97,19 @@ main{
     margin-top: 5px;
 }
 
+.domanda{
+    margin-bottom: 20px;
+}
+
 input[type="radio"]{
-    accent-color: var(--verde);
+    accent-color: #8f00ff;
 }
 
 
 button{
     padding: 10px;
     margin-top: 15px;
-    background-color: var(--verde);
+    background-color: #8f00ff;
     color: white;
     border: none;
     border-radius: 10px;
@@ -113,8 +119,9 @@ button{
 }
 
 button:hover{
-    background-color: white;
+    background-color: #7003c4;
     color: var(--verde);
+    cursor: pointer;
 }
 
 

@@ -28,6 +28,7 @@ body {
 /* Main */
 main {
   padding: 40px 48px;
+  padding-top: 134px;
 }
 
 section {
@@ -43,7 +44,7 @@ h2 {
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 32px;
+  gap: 25px;
 }
 
 .card {
@@ -53,6 +54,8 @@ h2 {
   overflow: hidden;
   box-shadow: 0 8px 20px rgba(0,0,0,0.08);
   background-color: var(--card-locked);
+  max-width: 280px;
+
 }
 
 .card-image {
