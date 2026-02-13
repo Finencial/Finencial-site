@@ -124,6 +124,11 @@ button:hover{
     cursor: pointer;
 }
 
+.domanda label {
+    display: block;
+    margin-bottom: 5px;
+}
+
 
 @media (max-width: 768px) {
 
