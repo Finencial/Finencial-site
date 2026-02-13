@@ -113,14 +113,12 @@ button{
     color: white;
     border: none;
     border-radius: 10px;
-    border: solid 2px var(--verde);
     transition: all 0.3s ease;
     font-size: 14px;
 }
 
-button:hover{
+.domanda button:hover {
     background-color: #7003c4;
-    color: var(--verde);
     cursor: pointer;
 }
 
