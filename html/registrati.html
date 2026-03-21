@@ -33,7 +33,7 @@
             <a href="nav-link/feed.html">Feed</a>
             <a href="nav-link/assistant.html">Assistant</a>
             <a href="nav-link/pricing.html">Pricing</a>
-            <a href="login.html">Account</a>
+            <a href="../php/check_session.php">Account</a>
         </nav>
     </header>
 
@@ -46,18 +46,18 @@
     <form action="../php/salva_utente.php" method="POST" id="registerForm">
         <div class="info">
             <div class="inputBox">
-                <span>Nome</span>
+                <span>Nome*</span>
                 <input type="text" name="nome" id="nome" required placeholder="Mario">
             </div>
             <div class="inputBox">
-                <span>Cognome</span>
+                <span>Cognome*</span>
                 <input type="text" name="cognome" id="cognome" required placeholder="Rossi">
             </div>
         </div>
 
         <div class="info">
             <div class="inputBox birth-group">
-                <span>Data di nascita</span>
+                <span>Data di nascita*</span>
                 <div class="birth-inputs">
                     <input type="number" name="day" id="day" placeholder="GG" min="1" max="31" required>
                     <input type="number" name="month" id="month" placeholder="MM" min="1" max="12" required>
@@ -68,7 +68,7 @@
 
         <div class="info">
             <div class="inputBox">
-                <span>Sesso</span>
+                <span>Sesso*</span>
                 <select name="sesso" id="sesso" required>
                     <option value="" disabled selected>M / F</option>
                     <option value="M">Maschio</option>
@@ -76,7 +76,7 @@
                 </select>
             </div>
             <div class="inputBox">
-                <span>Nazionalità</span>
+                <span>Nazionalità*</span>
                 <input type="text" name="nazionalita" id="nazionalita" required placeholder="Italiana">
             </div>
         </div>
@@ -93,17 +93,17 @@
         </div>
 
         <div class="inputBox">
-            <span>Email</span>
+            <span>Email*</span>
             <input type="email" name="email" id="email" required placeholder="rossi.mario@gmail.com">
         </div>
 
         <div class="info">
             <div class="inputBox">
-                <span>Password</span>
+                <span>Password*</span>
                 <input type="password" name="password" id="password" required placeholder="Password">
             </div>
             <div class="inputBox">
-                <span>Ripeti Password</span>
+                <span>Ripeti Password*</span>
                 <input type="password" id="confirmPassword" required placeholder="Ripeti password">
             </div>
         </div>

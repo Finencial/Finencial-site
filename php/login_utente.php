@@ -1,27 +1,26 @@
 <?php
+session_start(); // 1. Avvia la sessione all'inizio
 include "connessione.php";
 
 $email = $_POST['email'];
 $password = $_POST['password'];
 
-// 1. Cerchiamo l'utente solo tramite email (usando i Prepared Statements per sicurezza)
 $stmt = $conn->prepare("SELECT * FROM utente WHERE Email = ?");
 $stmt->bind_param("s", $email);
 $stmt->execute();
 $result = $stmt->get_result();
 
-// 2. Verifichiamo se l'utente esiste
 if ($result->num_rows > 0) {
     $utente = $result->fetch_assoc();
     
-    // 3. Confrontiamo la password del form con l'hash salvato nel DB
-    // password_verify() è la funzione magica che sa come gestire quegli hash "strani"
     if (password_verify($password, $utente['password'])) {
-        echo "Login riuscito! Benvenuto " . $utente['Nome'];
-        
-        // QUI in futuro potrai aggiungere:
-        // session_start();
-        // $_SESSION['utente_id'] = $utente['id'];
+        // 2. Salviamo i dati importanti nella sessione
+        $_SESSION['id_utente'] = $utente['IdUtente'];
+        $_SESSION['nome_utente'] = $utente['Nome'];
+
+        // 3. Reindirizziamo l'utente alla sua pagina account
+        header("Location: ../html/nav-link/account.html");
+        exit();
         
     } else {
         echo "Password errata!";
