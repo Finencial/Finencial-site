@@ -109,7 +109,13 @@ main{
 
 .btn1:hover {
     background-color: var(--violetGlass1);
-    transform: scale(1.02);
+    box-shadow: 0 0 8px var(--violet);
+    transform: scale(1.05);
+    backdrop-filter: blur(4px);
+}
+
+.btn1:active {
+    transform: scale(0.99);
 }
 
 /*Bottone Scopri i corsi*/
@@ -127,7 +133,13 @@ main{
 
 .btn2:hover {
     background-color: var(--violetGlass1);
-    transform: scale(1.02);
+    box-shadow: 0 2px 8px var(--violet);
+    backdrop-filter: blur(4px);
+    transform: scale(1.05);
+}
+
+.btn2:active {
+    transform: scale(0.99);
 }
 
 @media (max-width: 768px) {
@@ -136,13 +148,6 @@ main{
         font-size: 18px;
     }
 
-}
-
-section{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .pilastri{
@@ -156,7 +161,7 @@ section{
 .pilastri h1{
     font-size: 50px;
     color: white;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     text-align: center;
 }
 
@@ -169,7 +174,7 @@ section{
 }
 
 .card{
-    width: 400px;
+    width: 380px;
     height: 250px;
     border-radius: 20px;
     border: solid 2px var(--gray);
@@ -184,7 +189,9 @@ section{
     background-color: var(--violetGlass1);
     cursor: pointer;
     border-color: var(--violet);
-    transform:scale(1.05) ;
+    box-shadow: 0 0px 8px var(--violet);
+    backdrop-filter: blur(4px);
+    transform:scale(1.05) translateY(-10px);  
     cursor:default;
 }
 
@@ -207,7 +214,7 @@ section{
 }
 
 .card p{
-    margin: 25px 25px;
+    margin: 20px;
     font-size: 18px;
     color: rgb(185, 185, 185);
     transition: 0.3s ease;

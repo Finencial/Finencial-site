@@ -147,19 +147,25 @@ video,
 }
 
 button {
-    padding: 12px 25px;
+    padding: 10px 20px;
     margin-top: 15px;
     background-color: #8f00ff;
     color: white;
-    border: none;
-    border-radius: 10px;
-    font-weight: bold;
+    border: solid 2px var(--violet);
+    border-radius: 100px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
 button:hover {
-    background-color: #7003c4;
+    background-color: var(--violetGlass1);
+    box-shadow: 0 0px 8px var(--violet);
+    transform: scale(1.05);
+    backdrop-filter: blur(4px);
+}
+
+button:active {
+    transform: scale(0.99);
 }
 
 @media (max-width: 768px) {

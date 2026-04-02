@@ -1,10 +1,4 @@
 /* Header */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; /* Cambiato da 0 a border-box */
-    font-family: Arial, Helvetica, sans-serif;
-}
 
 header{
     margin-bottom: 134px;
@@ -15,7 +9,7 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 15px 48px;
-    background-color: rgba(15, 15, 15, 0.95);
+    background-color: rgb(15, 15, 15);
     color: white;
     border-bottom: 1px solid black;
     position: fixed;
@@ -27,7 +21,8 @@ header{
 .topbar.scrolled {
     padding-top: 0px;
     padding-bottom: 0px;
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(2px);
+    background-color: rgba(15, 15, 15, 0.95);
     border-bottom: 1px solid #333;
     transition: 0.5s;
 }
@@ -54,6 +49,7 @@ nav a {
     color: #000;
     transition: all 0.3s ease;
     color: #D5D5D5;
+    font-family: 'Poppins', sans-serif;
 }
 
 nav a:hover {
