@@ -42,10 +42,16 @@ h2 {
 
 /* Cards */
 .cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  display: flex;
   gap: 25px;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  cursor: grab;
 }
+.cards::-webkit-scrollbar { display: none; }
+.cards.grabbing { cursor: grabbing; }
 
 .card {
   position: relative;
@@ -54,8 +60,9 @@ h2 {
   overflow: hidden;
   box-shadow: 0 8px 20px rgba(0,0,0,0.08);
   background-color: var(--card-locked);
-  max-width: 280px;
-
+  max-width: 250px;
+  min-width: 250px;
+  user-select: none;
 }
 
 .card-image {

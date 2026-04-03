@@ -172,7 +172,13 @@ input[type=number] { -moz-appearance: textfield; }
 
 .Login:hover {
     background-color: var(--violetGlass1);
-    transform: scale(1.01);
+    box-shadow: 0 0 8px var(--violet);
+    transform: scale(1.05);
+    backdrop-filter: blur(4px);;
+}
+
+.login:active {
+    transform: scale(0.99);
 }
 
 /* LINKS */
