@@ -256,3 +256,10 @@ tr td:not(:first-child) {
         min-width: 600px; /* Permette lo scroll orizzontale su schermi piccoli */
     }
 }
+
+.disdici {
+    margin-top: 20px;
+    text-align: center;
+    color: var(--gray);
+    font-size: 16px;
+}

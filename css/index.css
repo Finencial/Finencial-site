@@ -14,7 +14,7 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 80px;
+    padding-top: 70px;
 }
 
 .hero {
@@ -48,7 +48,7 @@ main{
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); 
+    background-color: rgba(0, 0, 0, 0.55); 
     z-index: -1; 
 }
 
@@ -152,6 +152,8 @@ main{
 
 .pilastri{
     display: flex;
+    flex-direction: column;
+    
     flex-wrap: wrap;
     gap: 50px;
     justify-content: center;
@@ -161,8 +163,21 @@ main{
 .pilastri h1{
     font-size: 50px;
     color: white;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
     text-align: center;
+}
+
+.pilastri p{
+    font-size: 20px;
+    color: rgb(185, 185, 185);
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 50px auto;
+}
+
+.pilastri h1, .pilastri p{
+    display: flex;
+    flex-direction: column;
 }
 
 .cardContainer{

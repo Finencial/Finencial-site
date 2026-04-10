@@ -60,14 +60,15 @@ h2 {
   overflow: hidden;
   box-shadow: 0 8px 20px rgba(0,0,0,0.08);
   background-color: var(--card-locked);
-  max-width: 250px;
+  max-width: 260px;
   min-width: 250px;
   user-select: none;
 }
 
 .card-image {
-  height: 180px;
+  height: 160px;
   width: 100%;
+  aspect-ratio: 16/9;
 }
 
 .card-image.lock {
